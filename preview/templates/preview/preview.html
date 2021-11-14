@@ -1,0 +1,17 @@
+{% extends  "base.html" %}
+{% load static %}
+{% block content %}
+<div class="book">
+    <div class="bookimage">
+        <img src="{% static '10.jpg' %}">
+    </div>
+        <p class="booktitle">{{ book.book_name }}</p>
+        <p class="booktitle">{{ book.author }}</p>
+        <p class="booktitle">{{ book.price }}</p>
+        <p class="booktitle">{{ book.description }}</p>
+    <div class=" book content"></div>
+    <button type="button" id="checkout-button" onclick="buynow()">Checkout</button>
+</div>
+
+
+{% endblock content %}

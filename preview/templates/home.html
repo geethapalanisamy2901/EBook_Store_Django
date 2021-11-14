@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+
+  
+
+    {% block content %}
+    <div id="library" style="display: flex;flex-direction: columns; "> 
+   
+      {% for post in book %}
+  
+  <div id="book_lib">
+   
+       <img src="{{post.imgurl}}" width="130px" height="130px"> 
+    <p>{{ post.book_name}}</p>
+    <p>{{ post.author }}</p> 
+    <form action="cart" method="post">
+
+   <a href="cart">Add to cart</a>
+    <button><a class="nav-nav" href="{{post.Bookurl}}">View</a></button>
+
+   
+</div>
+  
+   {% endfor %}
+
+</div>
+
+   {% endblock content %} 
