@@ -82,12 +82,11 @@ WSGI_APPLICATION = 'ebookstore.wsgi.application'
 # }
 
 DATABASES = {
-        'default': {
+    'default': {
         'ENGINE': 'djongo',
         'name': 'djongo_test',
-        "CLIENT":{
-            'host':'mongodb+srv://hari:123@py.7qlld.mongodb.net/book_store?retryWrites=true&w=majority',
-        }
+        "CLIENT": {
+            'host': }
     }
 }
 
@@ -133,5 +132,5 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-STRIPE_PUBLIC_KEY="pk_test_51Jr3qGSHviUETl3UcxUhEMDuyaBI6j0inL0Dy51EodWMGEzl8iZSVvHfUQuer75h8fElnntV0IuD9XzLvrm8OjmX00OzfSqixr"
-STRIPE_SECRET_KEY="sk_test_51Jr3qGSHviUETl3UBptGcac390nY0IzoqnJkJoI81XE7K5udafJzXxrqPOBQAEYn9eXYfpIJQYvQIrIF0zlVCGcK002Xw7RNN6"
+STRIPE_PUBLIC_KEY = "pk_test_51Jr3qGSHviUETl3UcxUhEMDuyaBI6j0inL0Dy51EodWMGEzl8iZSVvHfUQuer75h8fElnntV0IuD9XzLvrm8OjmX00OzfSqixr"
+STRIPE_SECRET_KEY = "sk_test_51Jr3qGSHviUETl3UBptGcac390nY0IzoqnJkJoI81XE7K5udafJzXxrqPOBQAEYn9eXYfpIJQYvQIrIF0zlVCGcK002Xw7RNN6"
