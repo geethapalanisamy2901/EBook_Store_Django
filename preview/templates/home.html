@@ -3,8 +3,9 @@
 {% load static %}
 
     {% block content %}
+    <h1 style="text-align: center;padding: 0.5cm;">Find your next favourite book here</h1>
     <div id="library" style="display: flex;flex-direction: columns; "> 
-   
+       
       {% for post in bookdetail %}
   
   <div id="book_lib">
@@ -13,8 +14,7 @@
     <p>{{ post.book_name}}</p>
     <p>{{ post.author }}</p> 
     <form action="cart" method="post">
-
-   <a href="{% url 'cartupdate' user=1  idbook=post.id  %}">Add to cart</a>
+    <button style="margin: 0.2cm;"><a href="{% url 'cartupdate' user=1  idbook=post.id  %}">Add to cart</a></button><br>
     <button><a class="nav-nav" href="{{post.Bookurl}}">View</a></button>
 
    

@@ -2,12 +2,10 @@
 {% extends 'base.html' %}
 
 {% load static %}
-
-
- <!-- {% static 'libdesign.css' %}  -->
-  
-
+ 
+    
     {% block content %}
+    <h1 style="text-align: center;padding: 0.1cm;">Your Collections</h1>
     <div id="library" style="display: flex;flex-direction: columns; "> 
       {% for post in cart_item %}
   
