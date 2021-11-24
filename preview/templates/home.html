@@ -2,14 +2,10 @@
 
 {% load static %}
 
-
-
-  
-
     {% block content %}
     <div id="library" style="display: flex;flex-direction: columns; "> 
    
-      {% for post in book %}
+      {% for post in bookdetail %}
   
   <div id="book_lib">
    
@@ -18,7 +14,7 @@
     <p>{{ post.author }}</p> 
     <form action="cart" method="post">
 
-   <a href="cart">Add to cart</a>
+   <a href="{% url 'cartupdate' user=1  idbook=post.id  %}">Add to cart</a>
     <button><a class="nav-nav" href="{{post.Bookurl}}">View</a></button>
 
    

@@ -18,14 +18,14 @@
     <nav class="navbar navbar-expand  colorblue">
         <ul class="nav navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link colorblack" href="#">Ebook store<span class="sr-only"></span></a>
+                <a class="nav-link colorblack" href="{% url 'home' %}">Ebook store<span class="sr-only"></span></a>
+            </li>
+           <li class="rightalign ">
+                <span><a class="nav-link colorblack" href="{% url 'cartlist' 1 %}">Cart</a></span>
             </li>
             <li class="rightalign ">
-                <span><a class="nav-link colorblack" href="{% url 'cart' %}">Cart</a></span>
-            </li>
-            <li class="rightalign ">
-                <span><a class="nav-link colorblack" href="{% url 'lib' %}">Account</a></span>
-            </li>
+                <span><a class="nav-link colorblack" href="{% url 'lib' 1 %}">Library</a></span>
+            </li> 
         </ul>
     </nav>
     <div class="main">

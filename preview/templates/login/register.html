@@ -1,0 +1,35 @@
+{% extends 'login/base.html' %}
+
+{% block content %}
+<script>
+   
+	document.getElementById("login1").hidden = " ";
+  
+</script>
+
+
+<div class="formbox">
+<form id = "form" method="POST"  action="{% url 'register' %}" >
+
+	<h3> Register </h3>
+
+		{% csrf_token %}
+		
+		{% if form.errors %}
+		
+		<div class="alert alert-danger alart-dismissable" role ="alert">  
+
+        </div>
+		{% endif %}
+
+		{{ form.as_p }}
+
+		<input type="submit" class="mainbox" value= "REGISTER">
+		<label for="">Already an user?</label>
+		<a href="{% url 'login' %}" class="xyz">Login</a>
+
+	</form>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'login/base.html' %}
+
+{% block content %}
+<script>
+   
+	document.getElementById("login1").hidden = " ";
+  
+</script>
+<div class="formbox">
+	<form id = "form" method ="POST" action="{% url 'login' %}" >
+		<h3> Login</h3>	
+		{% csrf_token %}
+
+        <label for="">Username</label>
+	    <input type="text" placeholder="Enter Username" name = "username" class="asd"/>
+		<br/>
+        <label for="">Password</label>
+	    <input type="password"  placeholder="Enter Password" name="password3" class="asd"/> 
+		<button type="submit" onclick = "window.location.href = 'home.html'" class="mainbox" >LOGIN</button>
+
+		<label for="">New user?</label>
+		<a href="{% url 'register' %}" class="xyz">Register Now</a>
+	</form>
+</div>
+{% endblock %}
